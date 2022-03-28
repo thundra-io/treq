@@ -1,0 +1,35 @@
+{
+  "name": "treq",
+  "version": "0.0.0",
+  "description": "Tracer for module requires/imports to optimize coldstarts in serverless",
+  "author": "Serkan Özal <serkanozal86@gmail.com> (https://github.com/serkan-ozal)",
+  "homepage": "https://github.com/serkan-ozal/treq",
+  "repository": "serkan-ozal/treq",
+  "license": "MIT",
+  "main": "src/index.js",
+  "keywords": [
+    "coldstart",
+    "serverless",
+    "aws",
+    "lambda",
+    "tracer"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --config .prettierrc.json --write ./src/*.js",
+    "release-patch": "release-it --ci --git.commit --git.push --git.tag --git.tagName='v${version}' --github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-minor": "release-it minor --ci --git.commit --git.push --git.tag --git.tagName='v${version}' --github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-major": "release-it major --ci --git.commit --git.push --git.tag --git.tagName='v${version}' --github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks",
+    "release-minor-without-tag": "release-it minor --ci --no-git.commit --no-git.push --no-git.tag --no-git.tagName='v${version}' --no-github.release --no-git.requireCleanWorkingDir --no-git.requireUpstream --npm.publish --npm.skipChecks"
+  },
+  "files": [
+    "src/",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "release-it": "^14.5.0"
+  }
+}
