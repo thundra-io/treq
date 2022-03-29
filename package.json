@@ -1,6 +1,6 @@
 {
   "name": "treq",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Tracer for module requires/imports to optimize coldstarts in serverless",
   "author": "Serkan Özal <serkanozal86@gmail.com> (https://github.com/serkan-ozal)",
   "homepage": "https://github.com/serkan-ozal/treq",
