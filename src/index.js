@@ -3,6 +3,7 @@ const originalRequire = Module.prototype.require;
 
 const DURATION_THRESHOLD =
     parseInt(process.env['TREQ_DURATION_THRESHOLD']) || 10;
+const DISABLED = process.env['TREQ_DISABLE'] === 'true';
 
 class RequireTrace {
     constructor(moduleId) {
@@ -14,7 +15,7 @@ class RequireTrace {
 
 const activeReqs = [];
 
-Module.prototype.require = function traceRequires(id) {
+function traceRequire(id) {
     // Get current time
     const ts = process.hrtime();
 
@@ -51,7 +52,7 @@ Module.prototype.require = function traceRequires(id) {
     }
 
     return res;
-};
+}
 
 function dumpRequireStack(reqTrace, depth = 0) {
     if (reqTrace.duration && reqTrace.duration >= DURATION_THRESHOLD) {
@@ -69,4 +70,8 @@ function dumpRequireStack(reqTrace, depth = 0) {
             dumpRequireStack(childReqTrace, depth + 1);
         }
     }
+}
+
+if (!DISABLED) {
+    Module.prototype.require = traceRequire;
 }
