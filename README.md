@@ -74,7 +74,9 @@ XRAY TraceId: 1-62421a7e-0920949e7de8b8455b00f7c4	SegmentId: 05b5512a6f0e008a	Sa
 
 ## Installation
 
-### As NPM package
+You can add `treq` package into your AWS Lambda function either by NPM package or by AWS Lambda layer as shown below:
+
+### By NPM package
 
 To install the middleware, you can use NPM:
 
@@ -82,9 +84,16 @@ To install the middleware, you can use NPM:
 npm install --save treq
 ```
 
-### As AWS Lambda Layer
+### By AWS Lambda Layer
 
-Coming soon ...
+You can also add `treq` as layer into your AWS Lambda function.
+
+```
+arn:aws:lambda:${region}:273094347961:layer:treq:2
+
+```
+
+**Note:** In the ARN above, you need to replace `${region}` with the actual AWS region you deployed your AWS Lambda function. 
 
 
 ## Usage
