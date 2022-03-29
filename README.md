@@ -98,6 +98,11 @@ NODE_OPTIONS=-r treq
   Requires/imports take lower than the threshold are ignored from tracing. 
   By default, the threshold is `10` milliseconds and it can be configured by `TREQ_DURATION_THRESHOLD` environment variable.
 
+* **Optionally**, you can disable `treq` by setting `TREQ_DISABLE` environment variable to `true`.
+```
+TREQ_DISABLE=true
+```
+
 
 ## Contributing
 
