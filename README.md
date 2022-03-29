@@ -1,5 +1,9 @@
 # treq
 
+![workflow](https://github.com/serkan-ozal/treq/actions/workflows/build.yml/badge.svg)
+[![npm version](https://badge.fury.io/js/treq.svg)](https://badge.fury.io/js/treq)
+![license](https://img.shields.io/badge/license-MIT-blue)
+
 `treq` is a library to automatically trace requires/imports in your serverless applications 
 and gives you insights about the most expensive modules in terms of coldstart overhead.
 
