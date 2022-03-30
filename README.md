@@ -110,8 +110,21 @@ NODE_OPTIONS=-r treq
 * **Optionally**, you can configure require duration threshold (in milliseconds) for tracing.
   Requires/imports take lower than the threshold are ignored from tracing. 
   By default, the threshold is `10` milliseconds and it can be configured by `TREQ_DURATION_THRESHOLD` environment variable.
+  For example:
+```
+TREQ_DURATION_THRESHOLD=20
+```
 
-* **Optionally**, you can disable `treq` by setting `TREQ_DISABLE` environment variable to `true`.
+* **Optionally**, you can configure maximum depth/level limit to trace nested requires/imports.
+  Nested requires/imports deeper than the maximum depth/level limit are ignored from tracing.
+  By default, the max depth is `100` and it can be configured by `TREQ_MAX_DEPTH` environment variable.
+  For example:
+```
+TREQ_MAX_DEPTH=3
+```
+
+* **Optionally**, you can disable `treq` by setting `TREQ_DISABLE` environment variable to `true`. 
+  For example:
 ```
 TREQ_DISABLE=true
 ```
