@@ -93,7 +93,7 @@ npm install --save treq
 You can also add `treq` as layer into your AWS Lambda function.
 
 ```
-arn:aws:lambda:${region}:273094347961:layer:treq:2
+arn:aws:lambda:${region}:273094347961:layer:treq:3
 
 ```
 
