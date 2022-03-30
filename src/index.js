@@ -3,6 +3,7 @@ const originalRequire = Module.prototype.require;
 
 const DURATION_THRESHOLD =
     parseInt(process.env['TREQ_DURATION_THRESHOLD']) || 10;
+const MAX_DEPTH = parseInt(process.env['TREQ_MAX_DEPTH']) || 100;
 const DISABLED = process.env['TREQ_DISABLE'] === 'true';
 
 class RequireTrace {
@@ -55,7 +56,11 @@ function traceRequire(id) {
 }
 
 function dumpRequireStack(reqTrace, depth = 0) {
-    if (reqTrace.duration && reqTrace.duration >= DURATION_THRESHOLD) {
+    if (
+        reqTrace.duration &&
+        reqTrace.duration >= DURATION_THRESHOLD &&
+        depth < MAX_DEPTH
+    ) {
         let indent = '';
         for (let i = 0; i < depth; i++) {
             indent += '..';
