@@ -93,9 +93,11 @@ npm install --save treq
 You can also add `treq` as layer into your AWS Lambda function.
 
 ```
-arn:aws:lambda:${region}:273094347961:layer:treq:3
+arn:aws:lambda:${region}:273094347961:layer:treq:${layer-version}
 
 ```
+
+**Latest layer version:** ![treq](https://api.globadge.com/v1/badgen/aws/lambda/layer/latest-version/us-east-1/273094347961/treq)
 
 **Note:** In the ARN above, you need to replace `${region}` with the actual AWS region you deployed your AWS Lambda function. 
 
