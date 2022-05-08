@@ -97,7 +97,7 @@ arn:aws:lambda:${region}:273094347961:layer:treq:${layer-version}
 
 ```
 
-**Latest layer version:** ![treq](https://api.globadge.com/v1/badgen/aws/lambda/layer/latest-version/us-east-1/273094347961/treq)
+**Latest layer version:** ![treq](https://api.globadge.com/v1/badgen/aws/lambda/layer/latest-version/us-east-1/273094347961/treq) (badge powered by [Globadge serverless](https://www.globadge.com/badges/serverless))
 
 **Note:** In the ARN above, you need to replace `${region}` with the actual AWS region you deployed your AWS Lambda function. 
 
